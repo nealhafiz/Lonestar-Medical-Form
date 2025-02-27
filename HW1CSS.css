@@ -1,0 +1,19 @@
+/*
+Class: MIS 3371
+*/
+body {
+    background-color: floralwhite;
+     font-family: 'Verdana', sans-serif;
+}
+
+table{
+    margin: 0 auto;
+}
+
+form{
+    border-radius: 5px;
+}
+
+input {
+  border-radius: 5px; /* Apply to input, not the parent */
+}
