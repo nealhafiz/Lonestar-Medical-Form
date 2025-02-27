@@ -1,0 +1,234 @@
+<!--
+  Name: Neal Hafiz
+  MIS 3360 Homework 1-->
+ <!DOCTYPE html>
+<html>
+<head> <meta charset="UTF-8"> <!-- Without this, I had an A with accent that kept appearing on the page-->
+<link rel="stylesheet" href="HW1CSS.css">
+<title>Lonestar Medical New Patient</title>
+</head>
+<body>
+
+<div style="text-align: center;">
+<img src="LSMedical.png" alt="Girl in a jacket" width="700" height="100">
+<p>Please fill out the form below so we can better assist your needs.</p>
+</div>
+
+<div style="height: 2px; background-color: black; width: 50%; margin: 20px auto;">
+    <br>
+    <h2>Patient Registation Form<h2> <!--Area Header-->
+</div>
+
+<br><br><br>
+<table> <!--Table created for spacing and alignment-->
+  <tr>
+    <td>
+      <form action="#">
+        <tr> <!-- First, M.I., and Last Name Row-->
+          <td>
+         <!-- First Name and Last Name inputs on the same line -->
+        <input type="text" id="first" name="first" placeholder="John"maxlength="30"> &nbsp 
+        <input type="text" id="middle" name="middle" size="2" maxlength="1" placeholder="A"> &nbsp
+        <input type="text" id="last" name="last" placeholder="Doe" maxlength="30"><br>
+
+        <!-- Labels below each input field -->
+        <label for="first">First Name</label> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <!--No break space added for spacing and alignment-->
+        <lable for="middleint">M.I.</label> &nbsp &nbsp &nbsp
+        <label for="last">Last Name</label><br><br>
+        <td>
+          <tr>
+
+        <tr> <!--Date of Birth Row and SSN Row-->
+          <td>
+        <input type="date" id="date" name="date"> &nbsp 
+        <input type="password" id="SSN" name="SSN" size="23" maxlength="9"><br>
+
+        <label for="date">Date of Birth</label> &nbsp &nbsp 
+        <label for="SSN">Social Security</label><br><br>
+        <td>
+          <tr>
+        
+        <tr> <!--Address 1 & 2 Row -->
+          <td>
+            <input type="text" id="address1" name="address1"size="25" maxlength="30" placeholder="Primary"> &nbsp
+            <input type="text" id="address2" name="address2"size="25" maxlength="30"placeholder="Secondary"><br>
+
+            <label for="address1">Primary Address</label> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+            <label for="address2">Secondary Address</label><br><br>
+            <td>
+          <tr>
+
+        <tr> <!--City, State and Zip Row-->
+          <td>
+            <input type="text" id="city" name="city" size="30" maxlength="30"> &nbsp 
+            <select required name="states" id="states">
+              <option value=""></option>
+              <option value="Alabama">AL</option>
+              <option value="Alaska">AK</option>
+              <option value="Arizona">AZ</option>
+              <option value="Arkansas">AR</option>
+              <option value="California">CA</option>
+              <option value="Colorado">CO</option>
+              <option value="Conneticut">CT</option>
+              <option value="District of Columbia">DC</option>
+              <option value="Deleware">DE</option>
+              <option value="Florida">FL</option>
+              <option value="Georgia">GA</option>
+              <option value="Hawaii">HI</option>
+              <option value="Idaho">ID</option>
+              <option value="Illinois">IL</option>
+              <option value="Indiana">IN</option>
+              <option value="Indiana">IO</option>
+              <option value="Kansas">KS</option>
+              <option value="Kentucky">KY</option>
+              <option value="Louisiana">LA</option>
+              <option value="Maine">ME</option>
+              <option value="Maryland">MD</option>
+              <option value="Massachusetts">MA</option>
+              <option value="Michigan">MI</option>
+              <option value="Minnesota">MN</option>
+              <option value="Mississippi">MS</option>
+              <option value="Missouri">MO</option>
+              <option value="Montana">MT</option>
+              <option value="Nebraska">NE</option>
+              <option value="Nevada">NV</option>
+              <option value="New Hampshire">NH</option>
+              <option value="New Jersey">NJ</option>
+              <option value="New Mexico">NM</option>
+              <option value="New York">NY</option>
+              <option value="North Carolina">NC</option>
+              <option value="North Dakota">ND</option>
+              <option value="Ohio">OH</option>
+              <option value="Oklahoma">OK</option>
+              <option value="Oregon">OR</option>
+              <option value="Pennsylvania">PA</option>
+              <option value="Puerto Rico">PR</option>
+              <option value="Rhode Island">RI</option>
+              <option value="South Carolina">SC</option>
+              <option value="South Dakota">SD</option>
+              <option value="Tennessee">TN</option>
+              <option value="Texas">TX</option>
+              <option value="Utah">UT</option>
+              <option value="Vermont">VT</option>
+              <option value="Virginia">VA</option>
+              <option value="Washington">WA</option>
+              <option value="West Virgninia">WV</option>
+              <option value="Wisconsin">WI</option>
+              <option value="Wyoming">WY</option>
+              </select> &nbsp
+              <!--Zip Code input-->
+              <input type="text" id="zip" name="zip" maxlength="5" size="11">
+             <!--Labels for City, State, and Zip-->
+              <br>
+              <label for="city">City</label> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+              <label for="states">State</label> &nbsp &nbsp
+              <label for="zip">Zip Code</label><br><br>
+          <td>
+        <tr>
+
+      <!--Email Row-->
+      <tr>
+        <td>
+          <input type="email" id="email" name="email" size="30" placeholder="name@domain.tld"><br>
+          <label for="email">Email</label>
+        <td>
+      <tr>
+
+    <!-- Header for Health Section/Questionaire-->
+      <tr>
+      <td>
+        <h3>___________________________________<h3>
+        <h3>Your Current Health Information<h3>
+      <td>  
+    <tr>
+
+     <!--Symptoms Text Area-->
+     <tr>
+      <td>
+        <textarea id="symptoms" name="symptoms" rows="4" cols="50" placeholder="Describe your current symptoms..."></textarea><br>
+        <label for="symptoms">Current Symptoms</label><br>
+      <td>
+     <tr>
+
+     <!--Checkbox section-->
+      <tr>
+        <td>
+          <p>Please check if you had the any of the following below:<p>
+          &nbsp &nbsp<input type="checkbox" id="chickenpox" name="chickenpox" value="chickenpox">
+          <label for="chickenpox1"> Chicken Pox</label><br><br>
+
+           &nbsp &nbsp<input type="checkbox" id="measles" name="measles" value="Measles">
+          <label for="measles">Measles</label><br><br>
+
+           &nbsp &nbsp<input type="checkbox" id="covid" name="covid" value="covid">
+          <label for="covid">Covid-19</label><br><br>
+
+           &nbsp &nbsp<input type="checkbox" id="smallpox" name="smallpox" value="smallpox">
+          <label for="smallpox">Small Pox</label><br><br>
+
+           &nbsp &nbsp<input type="checkbox" id="tetanu" name="tetanus" value="tetanus">
+          <label for="tetanus">Tetanus</label><br><br>
+
+           &nbsp &nbsp<input type="checkbox" id="unsure" name="unsure" value="unsure">
+          <label for="unsure">Not sure</label><br>
+        <td>
+      <tr>
+
+     <!--Radio Options-->
+     <!--*leave both input name's set to gender so only one option can be selected*-->
+      <tr>
+        <td>
+         <p>Gender<p>
+        &nbsp<input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>   
+        &nbsp<input type="radio" id="female" name="gender" value="female"> &nbsp
+        <label for="female">  Female</label>
+        &nbsp<input type="radio" id="other" name="gender" value="other"> &nbsp
+        <label for="female">Other</label>
+        <td>
+      <tr>
+
+      <!--Vaccine Radio Button Area-->
+      <tr>
+        <td>
+         <p>Have you been vaccinated?<p>
+        &nbsp<input type="radio" id="Yes" name="vaccine" value="Yes">
+        <label for="Yes">Yes</label>   
+        &nbsp<input type="radio" id="No" name="vaccine" value="No"> &nbsp
+        <label for="No">No</label>
+        <td>
+      <tr>
+
+       <tr>
+        <td>
+         <p>Do You Have Insurance?<p>
+        &nbsp<input type="radio" id="Yes" name="Insurance" value="Yes">
+        <label for="Yes">Yes</label>   
+        &nbsp<input type="radio" id="No" name="Insurance" value="No"> &nbsp
+        <label for="No">No</label>
+        <td>
+       <tr>
+
+
+
+
+      
+      <!--Submit and clear button row-->
+      <tr>
+        <td>
+          <input type="submit" value="Submit">
+          <input type="reset" value="Clear">
+        <td>
+      <tr> 
+
+      
+
+      </form>
+    </td>
+  </tr>
+</table>
+
+
+</body>
+
+</html>
