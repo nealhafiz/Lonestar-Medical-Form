@@ -1,6 +1,11 @@
-<!--
-  Name: Neal Hafiz
-  MIS 3360 Homework 1-->
+ <!--
+Program name: HW1forReal.html
+Author: Neal Hafiz
+Date created: 2/3/2025
+Date last edited: 2/14/2025
+Version: 1.0
+Description: Patient Registration Page for Lonestar Medical.
+  -->
  <!DOCTYPE html>
 <html>
 <head> <meta charset="UTF-8"> <!-- Without this, I had an A with accent that kept appearing on the page-->
@@ -11,7 +16,8 @@
 
 <div style="text-align: center;">
 <img src="LSMedical.png" alt="Girl in a jacket" width="700" height="100">
-<p>Please fill out the form below so we can better assist your needs.</p>
+<!--https://www.quora.com/How-do-I-add-the-current-date-in-HTML-code#:~:text=Today's%20date%20is%3A,%2Fspan%3E-->
+<p>Please fill out the form below so we can better assist your needs.<br><br> Today's Date: <span id="today"></span></p>
 </div>
 
 <div style="height: 2px; background-color: black; width: 50%; margin: 20px auto;">
@@ -209,25 +215,88 @@
         <td>
        <tr>
 
+        <tr>
+          <td>
+            <p>Use the scale below to show us how you are feeling today? <br> (10 being the worst) </p>
 
+           <!-- Used slider from https://www.w3schools.com/howto/howto_js_rangeslider.asp-->
+            <div class="slider">
+            <input type="range" min="1" max="10" value="1" class="slider" id="Range">
+            <p>Value: <span id="slider"></span></p>
+           </div>
 
+          <script>
+          var slider = document.getElementById("Range");
+          var output = document.getElementById("slider");
+         output.innerHTML = slider.value;
 
+         slider.oninput = function() {
+         output.innerHTML = this.value;
+        }
+        </script>
+       <td>
+      <tr>
       
+       <!--Account login setup-->
+       <tr>
+        <td>
+          <h3>____________________________________<br>Account Login Setup</h3>
+          <input type="text" id="username" name="username"size="25" maxlength="20" placeholder="Username" required><br>
+          <label for="username">Username</label><br><br>
+
+          <input type="password" id="password" name="password"size="25" maxlength="20" placeholder="Password" required> &nbsp &nbsp &nbsp
+          <input type="password" id="passcheck" name="passcheck"size="25" maxlength="20" placeholder="Re-Enter Password" required><br>
+
+          <label for="password">Password</label> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+          <label for="passcheck">Re-Enter Password</label><br>
+
+        <td>
+       <tr>
+      
+
+       <!--Section Seperator-->
+       <tr>
+        <td>
+          <h3>____________________________________<h3>
+        <td>
+       <tr>
+
+    
       <!--Submit and clear button row-->
       <tr>
         <td>
-          <input type="submit" value="Submit">
+          <div style="text-align: center;">
+          <input type="submit" value="Submit"> &nbsp &nbsp &nbsp 
           <input type="reset" value="Clear">
+          </div>
         <td>
       <tr> 
-
-      
 
       </form>
     </td>
   </tr>
 </table>
 
+<!--Date Script borrowed from Professor Messinger from in class example-->
+<script>
+  const d = new Date();
+  let text = d.toLocaleDateString();
+  document.getElementById("today").innerHTML = text;
+</script>
+
+<br>
+
+<!-- Footer Tag https://www.w3schools.com/TAgs/tag_footer.asp-->
+<footer>
+  <p>
+    _______________________________<br>
+    Medical Lonestar <br>
+    PO BOX 77721 <br>
+    Houston, TX 77017<br>
+    Call us at (281)-777-25790 <br>
+    Follow us on Facebook and Instagram!
+    </p>
+  </footer>
 
 </body>
 
