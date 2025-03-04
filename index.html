@@ -283,6 +283,15 @@ Description: Patient Registration Page for Lonestar Medical.
   let text = d.toLocaleDateString();
   document.getElementById("today").innerHTML = text;
 </script>
+           
+<!--Password Matching code-->
+<script>
+ var password = document.getElementByID("password");
+ var passcheck = document.getElementByID("passcheck");
+
+ if (password == passcheck){
+  alert("Password does not match");
+</script>
 
 <br>
 
