@@ -34,7 +34,7 @@ Description: Patient Registration Page for Lonestar Medical.
   <table> <!--Table created for spacing and alignment-->
     <tr>
       <td>
-        <form action="#" id="medicalform" onsubmit="return PasswordCheck()"> <!--Form Action-->
+        <form action="#" id="medicalform" onsubmit="return PasswordCheck()" onsubmit="return usernamepasscheck()"> <!--Form Action-->
           <tr> <!-- First, M.I., and Last Name Row-->
             <td>
            <!-- First Name and Last Name inputs on the same line -->
@@ -240,7 +240,7 @@ Description: Patient Registration Page for Lonestar Medical.
             <label for="username">Username</label><br><br>
   
             <input type="password" id="password" name="password"size="25" maxlength="20" placeholder="Password" required> &nbsp &nbsp &nbsp
-            <input type="password" id="passcheck" name="passcheck"size="25" maxlength="20" placeholder="Re-Enter Password" required><br>
+            <input type="password" id="passcheck" name="passcheck"size="25" maxlength="30" minlength="8" placeholder="Re-Enter Password" required><br>
   
             <label for="password">Password</label> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
             <label for="passcheck">Re-Enter Password</label><br>
