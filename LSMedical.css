@@ -25,7 +25,7 @@ input {
 }
 
 
-/* Password Validation box Box */
+/* Password Validation box Box https://www.w3schools.com/howto/howto_js_password_validation.asp */ 
 #message {
     display:none;
     background: #f1f1f1;
@@ -35,7 +35,7 @@ input {
     margin-top: 10px;
 }
 
-/* Message box appears when user clicks on field */
+/* The message box is shown when the user clicks on the password field */
 #message {
     display:none;
     background: #f1f1f1;
@@ -50,26 +50,26 @@ input {
     font-size: 18px;
   }
   
-  /* green text once it is valid*/
+  /* Add a green text color and a checkmark when the requirements are right */
   .valid {
     color: green;
   }
   
   .valid:before {
-  content: "✔";  
-  margin-right: 10px; 
+  content: "✔";  /* Checkmark icon */
+  margin-right: 10px;  /* Space between icon and text */
   position: relative;
   left: -35px;
   }
   
-  /* Red text and X when invalid */
+  /* Add a red text color and an "x" icon when the requirements are wrong */
   .invalid {
     color: red;
   }
   
   .invalid:before {
-  content: "X"; 
-  margin-right: 10px;  
+  content: "X";  /* "X" icon */
+  margin-right: 10px;  /* Space between icon and text */
   position: relative;
   left: -35px;
 
